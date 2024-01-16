@@ -6,6 +6,11 @@ from item.forms import EditItemForm, NewItemForm
 
 from .models import Category, Item
 
+# def browse(request):
+#     items=Item.objects.filter(is_sold=False);
+#     return render(request, 'item/items.html', {"items":items} )
+
+
 def items(request):
     query = request.GET.get('query', '')
     category_id = request.GET.get('category', 0)
